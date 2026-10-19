@@ -1,11 +1,13 @@
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, recall_score
+import os
+
+import joblib
 import mlflow
 import mlflow.sklearn
-import joblib
-import os
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, recall_score
+from sklearn.model_selection import train_test_split
+
 
 def train_model(n_estimators, max_depth, run_name):
     # 读取 DVC 追踪的 v2 数据

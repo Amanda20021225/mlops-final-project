@@ -1,8 +1,9 @@
+import os
+
+import joblib
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
-import joblib
-import os
 
 app = FastAPI()
 templates = Jinja2Templates(directory="app/templates")
