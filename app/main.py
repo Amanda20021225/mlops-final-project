@@ -26,7 +26,6 @@ class PatientData(BaseModel):
 def read_root(request: Request):
     return templates.TemplateResponse(request=request, name="index.html")
 
-
 @app.post("/api/predict")
 def predict(data: PatientData):
     if model is None:
